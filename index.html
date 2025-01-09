@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMK Fashion</title>
+    <style><div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+</div>
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        h1 {
+            color: #00ff00;
+        }
+
+        .product-item {
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .product-item img {
+            width: 150px;
+            height: auto;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .cart, .checkout {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #00ff00;
+        }
+
+        .checkout {
+            margin-top: 20px;
+        }
+
+        #opening-animation {
+            background-color: black;
+            color: #00ff00;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #00ff00;
+            animation: fadeOut 3s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="opening-animation">
+        <p>Welcome to IMK Fashion</p>
+    </div>
+
+    <header>
+        <img src="https://i.postimg.cc/fbJXBdPb/download-1.jpg" alt="IMK Fashion Logo" class="logo">
+        <h1>IMK Fashion</h1>
+    </header>
+
+    <section class="product-list">
+        <!-- T-shirt -->
+        <div class="product-item">
+            <img src="https://i.postimg.cc/YC7WKVyT/images.jpg" alt="T-shirt">
+            <h2>Stylish T-shirt</h2>
+            <p class="product-price">3500</p>
+            <label for="size">Size:</label>
+            <select class="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <label for="color">Color:</label>
+            <select class="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="black">Black</option>
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shoes -->
+        <div class="product-item">
+            <img src="https://i.postimg.cc/hP1GxGp3/images.jpg" alt="Shoes">
+            <h2>Premium Shoes</h2>
+            <p class="product-price">6000</p>
+            <label for="size">Size:</label>
+            <select class="size">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <label for="color">Color:</label>
+            <select class="color">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Shirt -->
+        <div class="product-item">
+            <img src="https://i.postimg.cc/0Nwjz037/download-2.jpg" alt="Shirt">
+            <h2>Casual Shirt</h2>
+            <p class="product-price">4000</p>
+            <label for="size">Size:</label>
+            <select class="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <label for="color">Color:</label>
+            <select class="color">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="gray">Checked Shirt</option>
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Bracelet -->
+        <div class="product-item">
+            <img src="https://i.postimg.cc/90ZFMmnV/IMG-20250108-WA0001.jpg" alt="Bracelet">
+            <h2>Men's Bracelet</h2>
+            <p class="product-price">4000</p>
+            <label for="size">Size:</label>
+            <select class="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <label for="color">Color:</label>
+            <select class="color">
+                <option value="brown">Brown</option>
+                <option value="gold">Gold</option>
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+<section class="checkout">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+        
+        <label>Payment Method:</label>
+        <div>
+            <input type="radio" id="cod" name="payment" value="Cash on Delivery" required>
+            <label for="cod" class="payment-label">Cash on Delivery</label>
+        </div>
+        <div>
+            <input type="radio" id="online-transfer" name="payment" value="Online Transfer" required>
+            <label for="online-transfer" class="payment-label">Online Transfer</label>
+        </div>
+        
+        <button type="submit" class="submit-button">Place Order</button>
+    </form>
+</section>
+
+
+   
+
+    <footer>
+        <p>Contact Us: <a href="mailto:shazeenzameer49@gmail.com">shazeenzameer49@gmail.com</a></p>
+        <p>&copy; 2025 IMK Fashion</p>
+    </footer>
+
+    <script>
+        const cart = [];
+        const cartItems = document.getElementById('cart-items');
+        const checkoutForm = document.getElementById('checkout-form');
+        const placeOrderButton = document.getElementById('place-order');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const product = button.closest('.product-item');
+                const name = product.querySelector('h2').innerText;
+                const price = product.querySelector('.product-price').innerText;
+                const size = product.querySelector('.size').value;
+                const color = product.querySelector('.color').value;
+
+                cart.push({ name, price, size, color });
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItems.innerHTML = cart.map(item =>
+                    `<p>${item.name} - ${item.size} - ${item.color} - ${item.price}</p>`
+                ).join('');
+            }
+        }
+
+        placeOrderButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+
+            if (name && address) {
+                alert(`Order placed successfully! \nName: ${name} \nAddress: ${address}`);
+                cart.length = 0; // Clear cart
+                updateCart();
+                checkoutForm.reset();
+            } else {
+                alert('Please fill all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
